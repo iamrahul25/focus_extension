@@ -1,8 +1,11 @@
 // content.js
-const element = document.getElementById("voyager-feed");
-if (element) {
-    element.remove();
-    console.log("Element with id 'voyager-feed' has been removed.");
-} else {
-    console.log("Element with id 'voyager-feed' not found.");
+try {
+    const element = document.getElementById("voyager-feed");
+    
+    //Make it Hidden
+    element.style.display = "none";
+    console.log("Feed Element Hidden!");
+
+} catch (error) {
+    console.error('Error removing element:', error);
 }
